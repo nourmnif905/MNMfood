@@ -1,0 +1,51 @@
+body{
+    width: 99%;
+    height: 97%;
+    background-image: url('aaa.jpg');
+    background-size: cover;
+
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding: 0px 40px;
+}
+.logo{
+    font-size: 60px;
+    color: orangered;
+    font-style: oblique;
+}           
+.nav{
+    position: relative;
+    left: -130px;
+}
+a{
+    padding:  25px;
+    color: orange;
+    font-size: 20px;
+    font-weight: bold;
+}
+.search{
+    font-size: 25px;
+}
+.left{
+    justify-content: space-evenly;
+    padding-top: 65px;
+    align-items: center;
+    color: bisque;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-style: italic;
+    padding-left: 100px;
+}
+.left button{
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 2px solid white;
+    margin: 20px 0px;    
+}
