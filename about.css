@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+body{
+background-color:rgb(250, 244, 236);
+}
+.navbar .logom{
+    width: 100px;
+}
+.navbar .logo{
+    font-size: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: rgb(207, 64, 20);
+    font-style:italic;
+    margin-right: 280px;
+
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 7vw; 
+    background-color: rgb(248, 232, 217);
+    border-bottom: 2px solid rgb(252, 196, 124);
+    box-shadow: 2px 2px 20px rgba(161, 16, 16, 0.5); 
+} 
+.navbar .nav-links ul{
+    display: flex;
+    
+}
+.navbar .nav-links a:hover{
+    color: rgb(48, 44, 44); /* Change la couleur en blanc au survol */
+  text-decoration: underline;
+    
+}
+.navbar .nav-links ul li{
+    margin: 0 25px;
+    font-weight: bold;
+}
+
+.navbar a{
+    color: rgb(248, 119, 72);
+}
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+    background-color:rgb(250, 244, 236);
+}
+
+.about .content {
+    width: 50%;
+
+}
+
+.about h2 {
+    margin-bottom: 10px;
+    color: #d35400;
+    font-size: 28px;
+}
+
+.about p {
+    font-size: 16px;
+    color: #333;
+}
+
+.about .image img {
+    width: 500px;
+    height: auto;
+    animation: moveUp 3s ease-in-out infinite;
+}
+@keyframes moveUp {
+    0%{
+        transform: translateY(20px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
+
+
+/* Section Our Golden Chefs */
+.chefs {
+    text-align: center;
+}
+
+.chefs h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #d35400;
+}
+
+.chefs-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.chef {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    height: 350px;
+
+}
+
+.chef img {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.chef p {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #555;
+}
+table {
+    border-collapse: collapse; 
+    border: 5px solid #0d0e0d;
+    margin-top:60px;
+    text-align: center;
+    background-color:rgb(248, 246, 242);
+    box-shadow: 0 0px 8px rgba(0,0,0,0.2);
+
+}
+.table-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+}
+table,th,td{
+    border: 2px solid rgb(124, 119, 117);
+}
+td b{
+    color: rgb(207, 64, 20);
+    
+
+}
+.photo{
+    justify-items: center;
+}
+.photo h2{
+    text-align: center;
+    color: #d35400;
+    
+}
+audio{
+    justify-content: center;
+    width: 600px;
+    box-shadow: 0 0px 8px rgba(0,0,0,0.2);    
+}
+footer {
+    color: rgb(248, 119, 72);
+    padding: 40px;
+    margin-top: 40px;
+    background-color: rgb(248, 232, 217);
+    border-top: 2px solid rgb(252, 196, 124);
+    box-shadow: 0 2px 20px rgba(243, 106, 106, 0.5);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Partie gauche: Coordonnées */
+.footer-left h3 {
+    margin-bottom: 10px;
+    color: #d35400;
+}
+
+.footer-left p {
+    margin: 5px 0;
+}
+
+/* Partie droite: Icônes des réseaux sociaux */
+.footer-right a {
+    margin: 0 10px;
+}
+
+.footer-right img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-right img:hover {
+    transform: scale(1.1);
+}

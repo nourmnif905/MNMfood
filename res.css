@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+body{
+background-color:rgb(250, 244, 236);
+}
+.navbar .logom{
+    width: 100px;
+}
+.navbar .logo{
+    font-size: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: rgb(207, 64, 20);
+    font-style:italic;
+    margin-right: 280px;
+
+}
+.container {
+    padding-top: 100px; /* Pour éviter que le navbar ne cache le contenu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 7vw; 
+    background-color: rgb(248, 232, 217);
+    border-bottom: 2px solid rgb(252, 196, 124);
+    box-shadow: 0 2px 20px rgba(253, 124, 124, 0.5); 
+} 
+.navbar .nav-links ul{
+    display: flex;
+    
+}
+.navbar .nav-links a:hover{
+    color: rgb(48, 44, 44); /* Change la couleur en blanc au survol */
+  text-decoration: underline;
+    
+}
+.navbar .nav-links ul li{
+    margin: 0 25px;
+    font-weight: bold;
+}
+
+.navbar a{
+    color: rgb(248, 119, 72);
+}
+/* Box du formulaire */
+.reservation-form {
+
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 120px auto;  /* Centrer le formulaire verticalement et horizontalement */
+}
+
+/* Titres du formulaire */
+.reservation-form h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: rgb(207, 64, 20); /* Couleur de titre assortie à la couleur du logo */
+}
+
+/* Espacement entre les champs */
+.reservation-form .group {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.reservation-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Champs de saisie */
+.reservation-form input[type="text"],
+.reservation-form input[type="email"],
+.reservation-form input[type="tel"],
+.reservation-form input[type="date"],
+.reservation-form input[type="time"],
+.reservation-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Bordure des champs au focus */
+.reservation-form input:focus,
+.reservation-form select:focus {
+    border-color: rgb(207, 64, 20);
+    outline: none;
+}
+
+/* Bouton de soumission */
+.reservation-form button {
+    background-color: rgb(207, 64, 20);
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet de survol sur le bouton */
+.reservation-form button:hover {
+    background-color: rgb(248, 119, 72);
+}
+
+/* Style du select (nombre de personnes) */
+.reservation-form select {
+    padding: 10px;
+}
+
+/* Petit style pour l'élément de "guests" */
+.reservation-form .group select option {
+    font-size: 16px;
+}
+
+/* Ajuster la largeur des éléments du formulaire */
+@media screen and (max-width: 768px) {
+    .reservation-form {
+        width: 90%;
+        padding: 15px;
+    }
+}

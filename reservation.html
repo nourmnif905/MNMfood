@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Réservation</title>
+    <link rel="stylesheet" href="res.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="logom.png" class="logom">
+        <a href="#" class="logo">MNMfood</a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="accueil.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li> 
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    </div>
+    </nav>
+    <div class="container">
+        <form id="reservationForm" class="reservation-form">
+            <h2>Réservez une table maintenant</h2>
+
+            <div class="group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" placeholder="Votre Nom" required>
+            
+                <label for="surname">Prénom</label>
+                <input type="text" id="surname" placeholder="Votre Prénom" required>
+            
+                <label for="email">Votre Email</label>
+                <input type="email" id="email" placeholder="Votre Email" required>
+    
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="phone" placeholder="Votre Téléphone" required>
+            
+                <label for="date">Date de réservation</label>
+                <input type="date" id="date" required>
+            
+                <label for="time">Heure de réservation</label>
+                <input type="time" id="time" required>
+            </div>
+
+            <div class="group">
+                <select id="guests" required>
+                    <option value="">Nombre de personnes</option>
+                    <option value="1">1 personne</option>
+                    <option value="2">2 personnes</option>
+                    <option value="3">3 personnes</option>
+                    <option value="4">4 personnes</option>
+                    <option value="5">5 personnes</option>
+                    <option value="6+">6 et plus</option>
+                </select>
+            </div>
+
+            <button type="submit">Réserver maintenant</button>
+        </form>
+        
+</body>
+</html>

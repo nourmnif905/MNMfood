@@ -1,51 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
 body{
-    width: 99%;
-    height: 97%;
-    background-image: url('aaa.jpg');
-    background-size: cover;
+background-color:rgb(250, 244, 236);
+}
+.navbar .logom{
+    width: 100px;
+}
+.navbar .logo{
+    font-size: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: rgb(207, 64, 20);
+    font-style:italic;
+    margin-right: 280px;
 
 }
-.top{
+.navbar {
+    position: fixed;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    height: 80px;
     align-items: center;
-    padding: 0px 40px;
+    height: 80px;
+    padding: 0 7vw; 
+    background-color: rgb(248, 232, 217);
+    border-bottom: 2px solid rgb(252, 196, 124);
+    box-shadow: 0 2px 20px rgba(253, 124, 124, 0.5); 
+} 
+.navbar .nav-links ul{
+    display: flex;
+    
 }
-.logo{
-    font-size: 60px;
-    color: orangered;
-    font-style: oblique;
-}           
-.nav{
-    position: relative;
-    left: -130px;
+.navbar .nav-links a:hover{
+    color: rgb(48, 44, 44); /* Change la couleur en blanc au survol */
+  text-decoration: underline;
+    
 }
-a{
-    padding:  25px;
-    color: orange;
-    font-size: 20px;
+.navbar .nav-links ul li{
+    margin: 0 25px;
     font-weight: bold;
 }
-.search{
-    font-size: 25px;
+
+.navbar a{
+    color: rgb(248, 119, 72);
+}
+.navbar .menu-barre{
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    width: 35px;
+}
+.fa-solid{
+    display: none;
+    color: chocolate;
+    padding-left: 20px;
+}
+.tout {
+    padding: 0 7vw;
 }
 .left{
-    justify-content: space-evenly;
-    padding-top: 65px;
+    display: flex;
     align-items: center;
-    color: bisque;
+    flex-wrap: wrap-reverse;
+}
+.left div:nth-child(2) {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-right: 30px;
+    padding-top: 100px;
+
+}
+
+.left div:nth-child(1) {
+    padding-top: 80px;
+    flex: 1;
     font-size: 30px;
-    letter-spacing: 1px;
-    font-style: italic;
     padding-left: 100px;
+    
 }
-.left button{
-    width: 150px;
-    height: 30px;
-    font-size: 15px;
-    border-radius: 20px;
-    border: 2px solid white;
-    margin: 20px 0px;    
+.left img{
+    width: 500px;
+    cursor: pointer;
+    
 }
+.left button { 
+    cursor:  pointer;  
+margin-top: 20px;  
+width: 160px;  
+font-weight: bold;  
+color: aliceblue;  
+line-height: 50px;  
+background-color: rgb(243, 171, 145);  
+border-radius: 5px;  
+border: 1px solid rgb(58, 49, 45);  
+box-shadow: 0 10px 15px rgb(87, 82, 75);  
+transition: all 0.2s; 
+}
+
+
+@media screen and (max-width: 720px) {
+    .navbar a{
+        color: rgb(148, 55, 22);
+    }
+    .navbar {
+        padding: 0;
+    }
+    .fa-solid{
+        display: flex;
+        color: chocolate;
+        padding-right: 43px;
+    }
+    .navbar .menu-barre{
+        display: block;
+    }
+    .nav-links{
+        top:0;
+        left:0;
+        position: absolute;
+        background-color: rgba(255, 225, 255, 0.20);
+        backdrop-filter: blur(20px);
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .nav-links ul li{
+        margin: 25px 0;
+        font-weight: bold;
+        font-size: 1.2em;
+
+    }
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+    .navbar .logo{
+        margin-left: 50px;
+    }
+    
+    
+}
+
+
+/*.search {
+    width: 200px;
+    display: none;
+    justify-content: center;
+}
+
+.search input {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 5px; /* Ajustement de la valeur de padding 
+}
+.srchicon {
+    background-color: rgb(255, 218, 218);
+    display: block;
+    padding: 4px 5px; 
+    cursor: pointer; /* Ajout pour indiquer que l'icône est cliquable 
+}*/
+

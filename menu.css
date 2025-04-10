@@ -1,0 +1,91 @@
+body {
+    background-color:rgb(250, 244, 236);
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+.heading .logom{
+    width: 100px;
+}
+.heading .logo{
+    font-size: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: rgb(207, 64, 20);
+    font-style:italic;
+    margin-right: 280px;
+
+}
+.heading .nav-links ul{
+    display: flex;
+    
+}
+.heading .nav-links a:hover{
+    color: rgb(48, 44, 44); /* Change la couleur en blanc au survol */
+  text-decoration: underline;
+    
+}
+.heading .nav-links ul li{
+    margin: 0 25px;
+    font-weight: bold;
+}
+.heading a{
+    color: rgb(248, 119, 72);
+}
+
+.menu {
+    padding: 0 10px 30px 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px 40px;
+    
+}
+
+.heading{
+    background-color: rgb(248, 232, 217);
+    border-bottom: 2px solid rgb(252, 196, 124);
+    box-shadow: 0 2px 20px rgba(253, 124, 124, 0.5);
+    margin-bottom: 0px;
+    grid-column: 1/-1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 7vw;
+}
+
+.food-items{
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius:15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    transition: .2s ease-in-out;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.food-items img{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    
+}
+.details-sub>h5{
+    font-weight: 600;
+    font-size: 18px;
+}
+.price{
+    text-align: right;
+}
+.details{
+    padding: 20px 10px;
+}
