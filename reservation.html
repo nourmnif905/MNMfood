@@ -7,7 +7,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <img src="logom.png" class="logom">
+        <img src="assests/logom.png" class="logom">
         <a href="#" class="logo">MNMfood</a>
         <div class="nav-links">
             <ul>
@@ -77,7 +77,37 @@
           }
         }
       
-    
+        document
+        .getElementById("reservationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const name = document.getElementById("name").value.trim();
+          const surname = document.getElementById("surname").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+          const date = document.getElementById("date").value;
+          const time = document.getElementById("time").value;
+          const guests = document.getElementById("guests").value;
+
+          if (
+            !name ||
+            !surname ||
+            !email ||
+            !phone ||
+            !date ||
+            !time ||
+            !guests
+          ) {
+            alert("Merci de remplir tous les champs !");
+          } else if (phone.length !== 8) {
+            alert(
+              "Le numéro de téléphone doit contenir exactement 8 chiffres."
+            );
+          } else {
+            alert("Réservation accomplie avec succès !");
+            this.reset();
+          }
+        });
   </script>
         
                 

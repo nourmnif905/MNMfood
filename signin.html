@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('back.png') no-repeat center center fixed;
+      background: url('assests/back.png') no-repeat center center fixed;
       background-size: cover;
       backdrop-filter: blur(7px);
       height: 100vh;
@@ -110,8 +110,6 @@
   </style>
 </head>
 <body>
-
-  <!-- Formulaire d'inscription -->
   <div class="form-container" id="signupContainer">
     <span class="close-btn" id="closeBtn">&times;</span>
     <h2>Sign Up</h2>
@@ -137,7 +135,6 @@
     </div>
   </div>
 
-  <!-- Formulaire de connexion -->
   <div class="form-container login-container" id="loginContainer">
     <span class="close-btn" id="closeBtnLogin">&times;</span>
     <h2>Sign In</h2>
@@ -201,25 +198,20 @@
       }
     }
 
-    // Variables pour stocker les informations de l'utilisateur
+    
     let registeredEmail = '';
     let registeredPassword = '';
-
-    // Afficher le formulaire de connexion
     document.getElementById('showLoginLink').addEventListener('click', function (e) {
       e.preventDefault();
       document.getElementById('signupContainer').style.display = 'none';
       document.getElementById('loginContainer').style.display = 'block';
     });
-
-    // Afficher le formulaire d'inscription
     document.getElementById('showSignupLink').addEventListener('click', function (e) {
       e.preventDefault();
       document.getElementById('loginContainer').style.display = 'none';
       document.getElementById('signupContainer').style.display = 'block';
     });
 
-    // Gérer la soumission du formulaire d'inscription
     document.getElementById('signupForm').addEventListener('submit', function (e) {
       e.preventDefault();
       
@@ -245,7 +237,6 @@
       this.reset();
     });
 
-    // Gérer la soumission du formulaire de connexion
     document.getElementById('loginForm').addEventListener('submit', function (e) {
       e.preventDefault();
       
@@ -262,7 +253,7 @@
       }
     });
 
-    // Redirection vers accueil.html lorsqu'on clique sur la croix
+  
     document.getElementById('closeBtn').addEventListener('click', function() {
       window.location.href = 'accueil.html';
     });

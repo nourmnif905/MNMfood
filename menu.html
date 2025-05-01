@@ -1,215 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="menu.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="menu.css" />
     <title>MNMfood</title>
-</head>
-<body>
+    <style>
+      #btnTop {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #ff8c00;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 50%;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s;
+      }
+
+      #btnTop:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+
+  <body>
     <div class="menu">
-        <div class="heading">
-            <img src="logom.png" class="logom">
-            <a href="#" class="logo">MNMfood</a>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="accueil.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="about.html">About</a></li> 
-                    <li><a href="reservation.html">Reservation</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div> 
+      <div class="heading">
+        <img src="assests/logom.png" class="logom" alt="MNMfood Logo" />
+        <a href="#" class="logo">MNMfood</a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="accueil.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
-        <div class="food-items">
-            <img src="car.jpg">
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4>Pâtes Carbonara</h4>
-                    <h4 class="price">13dt</h4>
-                    <p>Délicieuses pâtes à la sauce carbonara</p>
-                </div>
-                
-            </div>
-            <div class="food-items">
-                <img src="sal.webp">
-                <div class="details">
-                    <div class="details-sub"></details></div>
-                        <h4>Salade César</h4>
-                        <h4 class="price">11dt</h4>
-                        <p>Poulet grillé, parmesan, croûtons et sauce césar</p>
-                    </div>
-                </div>
-            <div class="food-items">
-            <img src="https://images.radio-canada.ca/v1/alimentation/recette/1x1/plateau-fruits-mer.jpg">
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4>plateau fruits de mer </h4>
-                    <h4 class="price">25dt</h4>
-                    <p>Vous pouvez servir des légumes crus ou légèrement bouillis pour rester croquants.</p>
-                </div>
-                
-            </div>
-            <div class="food-items">
-            <img src="https://www.vitamont.com/wp-content/uploads/2023/03/poulet-a-la-normande.jpg">
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4>Poulet fermier à la poulet-a-la-normande</h4>
-                    <h4 class="price">18dt</h4>
-                    <p>à base de fruits de mer, de poulet, de porc ou même de crêpes sucrées,</p>
-                </div>
-                
-            </div>
-            <div class="food-items">
-            <img src="https://brandsitesplatform-res.cloudinary.com/image/fetch/w_auto:100,c_scale,q_auto:eco,f_auto,fl_lossy,dpr_auto,e_sharpen:85/https://assets.brandplatform.generalmills.com%2F-%2Fmedia%2Fproject%2Fgmi%2Foldelpaso%2Foldelpaso-ch%2Foepp%2Frecipes-2017%2Fchicken-ranch-tacos-16-9.jpg%3Frev%3D8c8abc95c25f4fb29021e2f3394b8223">
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4>Tacos</h4>
-                    <h4 class="price">10dt</h4>
-                    <p>Tacos au poulet et à la sauce Ranch</p>
-                </div>
-                
-            </div>   
-            <div class="food-items">
-            <img src="https://media-cdn.tripadvisor.com/media/photo-s/1a/30/11/62/makloub-our-specialty.jpg">
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4>Makloub</h4>
-                    <h4 class="price">9dt</h4>
-                    <p> à vous choix : thon , escalope , salami ,cordon bleu</p>
-                </div>
-                
-            </div>
-            <div class="food-items">
-            <img src="https://i.ytimg.com/vi/KGaUchwO3YY/maxresdefault.jpg">
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4>Cornet</h4>
-                    <h4 class="price">11dt</h4>
-                    <p>à vous choix : thon , escalope , salami ,cordon bleu</p>
-                </div>
-            </div>
-            <div class="food-items">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5tJvmtYR8XqVuNLwmzugcho7ua6IEcPK1-g&s">
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4>Pizza napotilaine</h4>
-                    <h4 class="price">15dt</h4>
-                    <p> tomates fraîches, de basilic, d'origan, d'ail, d'anchois et de mozzarella</p>
-                </div>
-            </div>     
-            <div class="food-items">
-            <img src=https://www.galbani.fr/wp-content/uploads/2017/07/Galbani_Veritable_Tiramisu_opt2.jpg>
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4>Tiramisu</h4>
-                    <h4 class="price">6dt</h4>
-                    <p>Le tiramisu est un dessert italien à base de biscuits imbibés de café, et saupoudré de cacao.</p>
-                </div>
-            </div>
-            <div class="food-items">
-            <img src=https://img.pikbest.com/origin/10/11/19/pIkbEsT35pIkbEsTKCd.jpg!w700wp>
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4>Gateaux au chocolat </h4>
-                    <h4 class="price">5dt</h4>
-                    <p>Un dessert moelleux et riche, fait principalement de chocolat fondant, souvent garni de ganache ou de cacao.</p>
-                </div>
-            </div>
-            <div class="food-items">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSazjfvLDTYJstQe3YdsAgmV_F7RY0UiMHDWA&s">
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4>Jwajem</h4>
-                    <h4 class="price">10dt</h4>
-                    <p>à votre choix ; au chocolat , fruité , caramilisé </p>
-                </div>
-            </div>
-            <div class="food-items">
-            <img src=https://vanoiserie.tn/wp-content/uploads/2023/03/cheesecake-caramel.jpg>
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4>cheesecake Caramel </h4>
-                    <h4 class="price">6dt</h4>
-                    <p> un dessert crémeux au fromage, avec une base de biscuits et une sauce caramel sucrée sur le dessus </p>
-                </div>
-            </div>
-            <div class="food-items">
-            <img src=https://caribbeanlifestyle.com/wp-content/uploads/2022/06/different-types-mojito-cocktail-dark-brown.jpg>
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4>Mojito</h4>
-                    <h4 class="price">8dt</h4>
-                    <p> A votre choix: bleu , fraise , citron</p>
-                </div>
-            </div>
-            <div class="food-items">
-            <img src=https://cuisinovores.com/wp-content/uploads/2024/10/photo_smoothie_ananas_cuisinovores-500x375.webp>
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4>Smoothie ananas</h4>
-                    <h4 class="price">6dt</h4>
-                    <p> Un délicieux smoothie à utiliser comme base pour un smoothie bowl</p>
-                </div>
-            </div>
-            <div class="food-items">
-            <img src=https://preppykitchen.com/wp-content/uploads/2021/04/Milkshake-Recipe-Card.jpg>
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4>Milkshake</h4>
-                    <h4 class="price">9dt</h4>
-                    <p> A votre choix; nutella ,fraise , vanilla  </p>
-                </div>
-            </div>
-            <div class="food-items">
-            <img src=https://static.wixstatic.com/media/0bc239_f763f3c94ced4f6b8818f995c0e078f0~mv2.jpeg/v1/fill/w_852,h_577,al_c,lg_1,q_85/0bc239_f763f3c94ced4f6b8818f995c0e078f0~mv2.jpeg>
-            <div class="details">
-                <div class="details-sub"></details></div>
-                    <h4> Jus </h4>
-                    <h4 class="price">6dt</h4>
-                    <p> A votre choix : orange , kiwi , pomme </p>
-                </div>
-            </div>   
-            <div class="food-items">
-            <div class="details">
-                <div class="details-sub"></details></div>
-                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOT DRINKS</h4>
-                    <ul>
-                    <li> expresso _________________3dt </li>
-                    <li> cappucin _________________3.5dt </li>
-                    <li> cappuccino _______________4dt </li>
-                    <li>chocolate _________________5dt </li>
-                    <li> amaricano_________________3.5dt</li>
-                    <li> hot tea ___________________3.5dt</li>
-                    </ul>
-                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ICED DRINKS</h4>
-                <ul>
-                    <li> soda ____________________3dt </li>
-                    <li> iced coffee _______________4dt </li>
-                    <li> peach tea ________________5dt </li>
-                    <li> lemon tea ________________5dt </li>
-                    <li> water(1L) ________________3dt</li>
-                    <li> water(0.5L) _______________2dt</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="food-items">
-                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUPPLEMENTAIRE</h4>
-                <ul>
-                    <li> FRITE _________________2dt </li>
-                    <li> SALADE VERTE _________4dt </li>
-                    <li> LEGUMES GRILLES ______4dt </li>
-                    <li> RIZ PARFUME __________4dt </li>
-                    <li> PUREE ________________2dt</li>
-                    <li> FORMAGE RAPE ________1dt</li>
-                    <li> oeuf__________________0,8dt</li>
-                    </ul>
-                </div>
-                
-            </div>                 
+      </div>
+
+      <div class="food-items">
+        <img src="assests/car.jpg" alt="Pâtes Carbonara" />
+        <div class="details">
+          <h4>Pâtes Carbonara</h4>
+          <h4 class="price">13dt</h4>
+          <p>Délicieuses pâtes à la sauce carbonara</p>
         </div>
+      </div>
+
+      <div class="food-items">
+        <img src="assests/sal.webp" alt="Salade César" />
+        <div class="details">
+          <h4>Salade César</h4>
+          <h4 class="price">11dt</h4>
+          <p>Poulet grillé, parmesan, croûtons et sauce césar</p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <img
+          src="https://images.radio-canada.ca/v1/alimentation/recette/1x1/plateau-fruits-mer.jpg"
+          alt="Plateau Fruits de Mer"
+        />
+        <div class="details">
+          <h4>Plateau Fruits de Mer</h4>
+          <h4 class="price">25dt</h4>
+          <p>Légumes crus ou légèrement bouillis pour rester croquants.</p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <img
+          src="https://www.vitamont.com/wp-content/uploads/2023/03/poulet-a-la-normande.jpg"
+          alt="Poulet fermier Normande"
+        />
+        <div class="details">
+          <h4>Poulet Fermier à la Normande</h4>
+          <h4 class="price">18dt</h4>
+          <p>
+            À base de fruits de mer, de poulet, de porc ou de crêpes sucrées.
+          </p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <img
+          src="https://brandsitesplatform-res.cloudinary.com/image/fetch/w_auto:100,c_scale,q_auto:eco,f_auto,fl_lossy,dpr_auto,e_sharpen:85/https://assets.brandplatform.generalmills.com/-%2Fmedia/project/gmi/oldelpaso/oldelpaso-ch/oepp/recipes-2017/chicken-ranch-tacos-16-9.jpg?rev=8c8abc95c25f4fb29021e2f3394b8223"
+          alt="Tacos"
+        />
+        <div class="details">
+          <h4>Tacos</h4>
+          <h4 class="price">10dt</h4>
+          <p>Tacos au poulet et à la sauce Ranch</p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <img
+          src="https://media-cdn.tripadvisor.com/media/photo-s/1a/30/11/62/makloub-our-specialty.jpg"
+          alt="Makloub"
+        />
+        <div class="details">
+          <h4>Makloub</h4>
+          <h4 class="price">9dt</h4>
+          <p>Au choix : thon, escalope, salami, cordon bleu</p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <img
+          src="https://i.ytimg.com/vi/KGaUchwO3YY/maxresdefault.jpg"
+          alt="Cornet"
+        />
+        <div class="details">
+          <h4>Cornet</h4>
+          <h4 class="price">11dt</h4>
+          <p>Au choix : thon, escalope, salami, cordon bleu</p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5tJvmtYR8XqVuNLwmzugcho7ua6IEcPK1-g&s"
+          alt="Pizza napolitaine"
+        />
+        <div class="details">
+          <h4>Pizza Napolitaine</h4>
+          <h4 class="price">15dt</h4>
+          <p>Tomates fraîches, basilic, origan, ail, anchois et mozzarella</p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <img
+          src="https://www.galbani.fr/wp-content/uploads/2017/07/Galbani_Veritable_Tiramisu_opt2.jpg"
+          alt="Tiramisu"
+        />
+        <div class="details">
+          <h4>Tiramisu</h4>
+          <h4 class="price">6dt</h4>
+          <p>Biscuit imbibé de café, crème mascarpone et cacao.</p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <img
+          src="https://img.pikbest.com/origin/10/11/19/pIkbEsT35pIkbEsTKCd.jpg!w700wp"
+          alt="Gâteau Chocolat"
+        />
+        <div class="details">
+          <h4>Gâteau au Chocolat</h4>
+          <h4 class="price">5dt</h4>
+          <p>Moelleux au chocolat fondant, ganache ou cacao.</p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSazjfvLDTYJstQe3YdsAgmV_F7RY0UiMHDWA&s"
+          alt="Jwajem"
+        />
+        <div class="details">
+          <h4>Jwajem</h4>
+          <h4 class="price">10dt</h4>
+          <p>Au choix : chocolat, fruits, caramelisé.</p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <img
+          src="https://vanoiserie.tn/wp-content/uploads/2023/03/cheesecake-caramel.jpg"
+          alt="Cheesecake Caramel"
+        />
+        <div class="details">
+          <h4>Cheesecake Caramel</h4>
+          <h4 class="price">6dt</h4>
+          <p>Fromage crémeux, biscuit croustillant et caramel.</p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <img
+          src="https://caribbeanlifestyle.com/wp-content/uploads/2022/06/different-types-mojito-cocktail-dark-brown.jpg"
+          alt="Mojito"
+        />
+        <div class="details">
+          <h4>Mojito</h4>
+          <h4 class="price">8dt</h4>
+          <p>Au choix : bleu, fraise, citron</p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <img
+          src="https://cuisinovores.com/wp-content/uploads/2024/10/photo_smoothie_ananas_cuisinovores-500x375.webp"
+          alt="Smoothie Ananas"
+        />
+        <div class="details">
+          <h4>Smoothie Ananas</h4>
+          <h4 class="price">6dt</h4>
+          <p>Délicieux smoothie pour smoothie bowl.</p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <img
+          src="https://preppykitchen.com/wp-content/uploads/2021/04/Milkshake-Recipe-Card.jpg"
+          alt="Milkshake"
+        />
+        <div class="details">
+          <h4>Milkshake</h4>
+          <h4 class="price">9dt</h4>
+          <p>Au choix : Nutella, fraise, vanille</p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <img
+          src="https://static.wixstatic.com/media/0bc239_f763f3c94ced4f6b8818f995c0e078f0~mv2.jpeg/v1/fill/w_852,h_577,al_c,lg_1,q_85/0bc239_f763f3c94ced4f6b8818f995c0e078f0~mv2.jpeg"
+          alt="Jus"
+        />
+        <div class="details">
+          <h4>Jus</h4>
+          <h4 class="price">6dt</h4>
+          <p>Au choix : orange, kiwi, pomme</p>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <div class="details">
+          <h4>HOT DRINKS</h4>
+          <ul>
+            <li>Expresso - 3dt</li>
+            <li>Cappuccino - 3.5dt</li>
+            <li>Cappuccino Crème - 4dt</li>
+            <li>Chocolat Chaud - 5dt</li>
+            <li>Américain - 3.5dt</li>
+            <li>Thé chaud - 3.5dt</li>
+          </ul>
+          <h4>ICED DRINKS</h4>
+          <ul>
+            <li>Soda - 3dt</li>
+            <li>Café Glacé - 4dt</li>
+            <li>Thé Pêche - 5dt</li>
+            <li>Thé Citron - 5dt</li>
+            <li>Eau (1L) - 3dt</li>
+            <li>Eau (0.5L) - 2dt</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="food-items">
+        <div class="details">
+          <h4>SUPPLÉMENTAIRES</h4>
+          <ul>
+            <li>Frites - 2dt</li>
+            <li>Salade Verte - 4dt</li>
+            <li>Légumes Grillés - 4dt</li>
+            <li>Riz Parfumé - 4dt</li>
+            <li>Purée - 2dt</li>
+            <li>Fromage Râpé - 1dt</li>
+            <li>Oeuf - 0.8dt</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
+    <button onclick="topFunction()" id="btnTop" title="Retour en haut">
+      ⬆
+    </button>
 
-</body>
+    <script>
+      const btnTop = document.getElementById("btnTop");
+
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          btnTop.style.display = "block";
+        } else {
+          btnTop.style.display = "none";
+        }
+      };
+
+      function topFunction() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </body>
 </html>
