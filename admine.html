@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inscription</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://img.freepik.com/free-photo/blurred-hotel-hall_1203-167.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(7px);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.97);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      padding: 30px 40px;
+      width: 100%;
+      max-width: 400px;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #888;
+      transition: color 0.3s;
+    }
+
+    .close-btn:hover {
+      color: #eeb178;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #eeb178
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #eeb178;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    
+    }
+
+    button:hover {
+      background-color: #eeb178;
+    }
+
+    .bottom-text {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .bottom-text a {
+      color: #f26522;
+      text-decoration: none;
+    }
+
+    .message {
+      margin-top: 10px;
+      text-align: center;
+      font-weight: bold;
+      color: red;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .login-container {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container" id="signupContainer">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <label for="fullname">Enter Full Name</label>
+      <input type="text" oninput="verifName()" id="fullname" name="fullname" placeholder="Full Name" required>
+
+      <label for="email">Enter E-mail</label>
+      <input oninput="verifmail()" type="email" id="email" name="email" placeholder="E-mail" required>
+
+      <label for="password">Create Password</label>
+      <input oninput="verifpass()" type="password" id="password" name="password" placeholder="Password" required>
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+
+      <button type="submit">Sign Up</button>
+      <div class="message" id="message"></div>
+    </form>
+
+    <div class="bottom-text">
+      Already have an account? <a href="#" id="showLoginLink">Sign In</a>
+    </div>
+  </div>
+
+  <div class="form-container login-container" id="loginContainer">
+    <span class="close-btn" id="closeBtnLogin">&times;</span>
+    <h2>Sign In</h2>
+    <form id="loginForm">
+      <label for="loginEmail">Enter E-mail</label>
+      <input type="email" id="loginEmail" name="email" placeholder="E-mail" required>
+
+      <label for="loginPassword">Enter Password</label>
+      <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+
+      <button type="submit">Sign In</button>
+      <div class="message" id="loginMessage"></div>
+    </form>
+
+    <div class="bottom-text">
+      Don't have an account? <a href="#" id="showSignupLink">Sign Up</a>
+    </div>
+  </div>
+
+  <script>
+    function verifName() {
+      let myinput = document.getElementById('fullname');
+      let myinputv = myinput.value.trim();
+
+      if (myinputv.length < 3) {
+        myinput.style.border = '2px solid red';
+        myinput.style.color = 'red';
+        myinput.style.boxShadow = '0 0 4px red';
+      } else {
+        myinput.style.border = '2px solid green';
+        myinput.style.color = 'green';
+        myinput.style.boxShadow = '0 0 4px green';
+      }
+    }
+    
+    function verifmail() {
+      let myinput = document.getElementById('email');
+      let myinputv = myinput.value;
+
+      if (myinputv.indexOf('@') < 0) {
+        myinput.style.border = '2px solid red';
+        myinput.style.color = 'red';
+        myinput.style.boxShadow = '0 0 4px red';
+      } else {
+        myinput.style.border = '2px solid green';
+        myinput.style.color = 'green';
+        myinput.style.boxShadow = '0 0 4px green';
+      }
+    }
+    
+    function verifpass() {
+      let myinput = document.getElementById('password');
+      let myinputv = myinput.value;
+
+      if (myinputv.length < 8) {
+        myinput.style.border = '2px solid red';
+        myinput.style.color = 'red';
+      } else {
+        myinput.style.border = '2px solid green';
+        myinput.style.color = 'green';
+      }
+    }
+
+    
+    let registeredEmail = '';
+    let registeredPassword = '';
+    document.getElementById('showLoginLink').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.getElementById('signupContainer').style.display = 'none';
+      document.getElementById('loginContainer').style.display = 'block';
+    });
+    document.getElementById('showSignupLink').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.getElementById('loginContainer').style.display = 'none';
+      document.getElementById('signupContainer').style.display = 'block';
+    });
+
+    document.getElementById('signupForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      const fullName = document.getElementById('fullname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      const messageDiv = document.getElementById('message');
+
+      if (password !== confirmPassword) {
+        messageDiv.textContent = "Passwords do not match.";
+        messageDiv.classList.remove('success');
+        return;
+      }
+
+      registeredEmail = email;
+      registeredPassword = password;
+
+      console.log("User Created:", { fullName, email });
+
+      messageDiv.textContent = "Account created successfully!";
+      messageDiv.classList.add('success');
+      this.reset();
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPassword').value;
+      const messageDiv = document.getElementById('loginMessage');
+
+      if (email === registeredEmail && password === registeredPassword) {
+        messageDiv.textContent = "Login successful!";
+        messageDiv.classList.add('success');
+      } else {
+        messageDiv.textContent = "Invalid email or password.";
+        messageDiv.classList.remove('success');
+      }
+    });
+
+  
+    document.getElementById('closeBtn').addEventListener('click', function() {
+      window.location.href = 'accueil.html';
+    });
+
+    document.getElementById('closeBtnLogin').addEventListener('click', function() {
+      window.location.href = 'accueil.html';
+    });
+  </script>
+
+</body>
+</html>

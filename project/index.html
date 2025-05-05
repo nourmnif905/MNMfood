@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Restaurant</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2>Restaurant Admin</h2>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li class="active" data-target="dashboard">
+            <i data-feather="home"></i>
+            <span>Dashboard</span>
+          </li>
+          <li data-target="website-config">
+            <i data-feather="settings"></i>
+            <span>Configuration</span>
+          </li>
+          <li data-target="menu-management">
+            <i data-feather="coffee"></i>
+            <span>Menu</span>
+          </li>
+          <li data-target="reservations">
+            <i data-feather="calendar"></i>
+            <span>Réservations</span>
+          </li>
+          <li data-target="contacts">
+            <i data-feather="mail"></i>
+            <span>Contacts</span>
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <span>© 2025 Restaurant Admin</span>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <div class="header">
+        <div class="header-left">
+          <button id="toggle-sidebar">
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+        <div class="header-right">
+          <div class="user-info">
+            <span>Admin</span>
+            <div class="user-avatar">
+              <i data-feather="user"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="content-area">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="content-section active">
+          <div class="section-header">
+            <h1>Dashboard</h1>
+          </div>
+          <div class="dashboard-stats">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i data-feather="users"></i>
+              </div>
+              <div class="stat-details">
+                <h3>15</h3>
+                <p>Réservations aujourd'hui</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i data-feather="coffee"></i>
+              </div>
+              <div class="stat-details">
+                <h3>42</h3>
+                <p>Éléments du menu</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i data-feather="mail"></i>
+              </div>
+              <div class="stat-details">
+                <h3>8</h3>
+                <p>Nouveaux messages</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i data-feather="trending-up"></i>
+              </div>
+              <div class="stat-details">
+                <h3>127</h3>
+                <p>Visites aujourd'hui</p>
+              </div>
+            </div>
+          </div>
+          <div class="quick-access">
+            <h2>Accès rapide</h2>
+            <div class="quick-buttons">
+              <button class="quick-btn" data-target="website-config">
+                <i data-feather="settings"></i>
+                <span>Configuration</span>
+              </button>
+              <button class="quick-btn" data-target="menu-management">
+                <i data-feather="coffee"></i>
+                <span>Gestion du menu</span>
+              </button>
+              <button class="quick-btn" data-target="reservations">
+                <i data-feather="calendar"></i>
+                <span>Réservations</span>
+              </button>
+              <button class="quick-btn" data-target="contacts">
+                <i data-feather="mail"></i>
+                <span>Contacts</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Website Configuration Section -->
+        <section id="website-config" class="content-section">
+          <div class="section-header">
+            <h1>Configuration du Site</h1>
+          </div>
+          <div class="config-form">
+            <div class="config-card">
+              <h2>Nos Coordonnées</h2>
+              <form id="contact-info-form">
+                <div class="form-group">
+                  <label for="address">Adresse:</label>
+                  <input type="text" id="address" value="La Manouba, Tunis">
+                </div>
+                <div class="form-group">
+                  <label for="phone">Téléphone:</label>
+                  <input type="text" id="phone" value="+216 20886869">
+                </div>
+                <div class="form-group">
+                  <label for="email">E-mail:</label>
+                  <input type="email" id="email" value="mnifnour24@gmail.com">
+                </div>
+                <button type="submit" class="save-btn">Enregistrer</button>
+              </form>
+            </div>
+
+            <div class="config-card">
+              <h2>Paramètres du Site</h2>
+              <form id="site-settings-form">
+                <div class="form-group">
+                  <label for="site-name">Nom du Restaurant:</label>
+                  <input type="text" id="site-name" value="Le Gourmet">
+                </div>
+                <div class="form-group">
+                  <label for="opening-hours">Heures d'ouverture:</label>
+                  <input type="text" id="opening-hours" value="Lun-Dim: 10h00 - 22h00">
+                </div>
+                <div class="form-group">
+                  <label for="theme-color">Couleur principale:</label>
+                  <input type="color" id="theme-color" value="#3B5998">
+                </div>
+                <button type="submit" class="save-btn">Enregistrer</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- Menu Management Section -->
+        <section id="menu-management" class="content-section">
+          <div class="section-header">
+            <h1>Gestion du Menu</h1>
+          </div>
+          <div class="menu-add-form">
+            <div class="config-card full-width">
+              <h2>Ajouter un élément au menu</h2>
+              <form id="add-menu-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="menu-name">Nom du plat:</label>
+                    <input type="text" id="menu-name" placeholder="Ex: Couscous Royal">
+                  </div>
+                  <div class="form-group">
+                    <label for="menu-price">Prix (DT):</label>
+                    <input type="number" id="menu-price" placeholder="Ex: 25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="menu-category">Catégorie:</label>
+                  <select id="menu-category">
+                    <option value="entree">Entrée</option>
+                    <option value="plat">Plat Principal</option>
+                    <option value="dessert">Dessert</option>
+                    <option value="boisson">Boisson</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="menu-description">Description:</label>
+                  <textarea id="menu-description" placeholder="Décrivez ce plat délicieux..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="menu-image">Image URL:</label>
+                  <input type="text" id="menu-image" placeholder="https://example.com/image.jpg">
+                  <p class="small-text">Ou téléchargez une image:</p>
+                  <input type="file" id="menu-image-upload">
+                </div>
+                <button type="submit" class="save-btn">Ajouter au menu</button>
+              </form>
+            </div>
+          </div>
+          
+          <div class="menu-items">
+            <h2>Éléments du menu</h2>
+            <div class="menu-items-list">
+              <!-- Menu items will be populated here from JS -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Reservations Section -->
+        <section id="reservations" class="content-section">
+          <div class="section-header">
+            <h1>Tableau des Réservations</h1>
+          </div>
+          <div class="reservations-controls">
+            <div class="search-box">
+              <i data-feather="search"></i>
+              <input type="text" id="reservation-search" placeholder="Rechercher...">
+            </div>
+            <div class="filter-controls">
+              <label for="date-filter">Filtrer par date:</label>
+              <input type="date" id="date-filter">
+              <button id="reset-filters" class="action-btn">Réinitialiser</button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="reservations-table">
+              <thead>
+                <tr>
+                  <th>Nom</th>
+                  <th>Prénom</th>
+                  <th>Email</th>
+                  <th>Téléphone</th>
+                  <th>Date</th>
+                  <th>Heure</th>
+                  <th>Personnes</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Reservations will be populated here from JS -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Contacts Section -->
+        <section id="contacts" class="content-section">
+          <div class="section-header">
+            <h1>Messages Reçus</h1>
+          </div>
+          <div class="contact-cards">
+            <!-- Contact cards will be populated here from JS -->
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/reservations.js"></script>
+  <script src="js/contacts.js"></script>
+</body>
+</html>
